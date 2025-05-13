@@ -23,7 +23,7 @@ function App() {
             <div className="row">
                 {actresses.map((act) => (
                     <div key={act.id} className="col-12 col-md-4 col-lg-3">
-                        <div>
+                        <div className="card">
                             <img src={act.image} alt={act.name} />
                             <h2>{act.name}</h2>
                             <p><strong>Anno di nascita:</strong> {act.birth_year}</p>
