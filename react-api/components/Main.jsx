@@ -19,18 +19,22 @@ function App() {
     };
 
     return (
-        <div>
-            {actresses.map((act) => (
-                <div key={act.id}>
-                    <img src={act.image} alt={act.name} />
-                    <h2>{act.name}</h2>
-                    <p><strong>Anno di nascita:</strong> {act.birth_year}</p>
-                    <p><strong>Nazionalità:</strong> {act.nationality}</p>
-                    <p><strong>Biografia:</strong> {act.biography}</p>
-                    <p><strong>Premi:</strong> {act.awards}</p>
-                    <hr />
-                </div>
-            ))}
+        <div className="container">
+            <div className="row">
+                {actresses.map((act) => (
+                    <div key={act.id} className="col-12 col-md-4 col-lg-3">
+                        <div>
+                            <img src={act.image} alt={act.name} />
+                            <h2>{act.name}</h2>
+                            <p><strong>Anno di nascita:</strong> {act.birth_year}</p>
+                            <p><strong>Nazionalità:</strong> {act.nationality}</p>
+                            <p><strong>Biografia:</strong> {act.biography}</p>
+                            <p><strong>Premi:</strong> {act.awards}</p>
+                            <hr />
+                        </div>
+                    </div>
+                ))}
+            </div>
         </div>
     );
 }
